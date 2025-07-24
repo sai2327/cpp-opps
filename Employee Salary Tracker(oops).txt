@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+class employee{
+private:
+	double salary;
+	int empid;
+public:
+	string name;
+	string dept;
+	void enter(string n,string d,double s,int e)
+	{
+		name = n;
+		dept = d;
+		setsalary(s);
+		setempid(e);
+	}
+	void setsalary(double s)
+	{
+		salary = s;
+	}
+	void setempid(int e)
+	{
+		empid = e;
+	}
+	double getsalary()
+	{
+		return salary;
+	}
+	int getempid()
+	{
+		return empid;
+	}
+	void display()
+	{
+		cout << name << "\n";
+		cout << dept << "\n";
+		cout << getempid() << "\n";
+		cout << getsalary() << "\n";
+	}
+};
+int main()
+{
+	employee e1;
+	e1.enter("Vivek","Frontend",70000.01,25);
+	e1.display();
+}
