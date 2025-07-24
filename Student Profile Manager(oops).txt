@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+class student{
+private:
+	int rollno;
+	int marks;
+public:
+	string name;
+	string branch;
+	void enter(string n,string b,int rn,int m)
+	{
+		name = n;
+		branch = b;
+		setrollno(rn);
+		setmarks(m);
+	}	
+	void setrollno(int rn)
+	{
+		rollno = rn;
+	}
+	void setmarks(int m)
+	{
+		marks = m;
+	}
+	int getrollno()
+	{
+		return rollno;
+	}
+	int getmarks()
+	{
+		return marks;
+	}
+};
+int main()
+{
+	student s1;
+	s1.enter("Vivek","CSE",7,100);
+	cout << s1.name << "\n";
+	cout << s1.getrollno() << "\n";
+	cout << s1.branch << "\n";
+	cout << s1.getmarks() << "\n";
+}

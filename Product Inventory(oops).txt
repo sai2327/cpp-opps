@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+class product{
+private:
+	int price;
+	int stock;
+public:
+	string productname;
+	string category;
+	void enter(string pn,string c,int p,int s)
+	{
+		productname = pn;
+		category = c;
+		setprice(p);
+		setstock(s);
+	}
+	void setprice(int p)
+	{
+		price = p;
+	}
+	void setstock(int s)
+	{
+		stock = s;
+	}
+	int getprice()
+	{
+		return price;
+	}
+	int getstock()
+	{
+		return stock;
+	}
+	void display()
+	{
+		cout << productname << "\n";
+		cout << category << "\n";
+		cout << getprice() << "\n";
+		cout << getstock() << "\n";
+	}
+};
+int main()
+{
+	product p1;
+	p1.enter("Television","Electronics",25000,200);
+	p1.display();
+}
